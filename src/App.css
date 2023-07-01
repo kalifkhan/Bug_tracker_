@@ -1,0 +1,63 @@
+#nav-bar-container{
+    background: #e48787;;
+    height: 90px;
+    border: solid;
+    border: #e48787 ;
+    padding: 10px;
+    
+    width: 1700px;
+    font-family :'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;   
+ 
+
+} 
+.bugs-list-container{
+        height: 300px;
+        margin-top: 10px;
+        overflow: scroll; 
+        border: solid rgb(213, 213, 232);
+        
+       
+}
+.bug-add{
+        background-color: rgb(187, 145, 187);
+        padding: 10px;
+}
+.bug-inprogress{
+    background-color: rgb(209, 186, 209);
+        padding: 10px;
+
+}
+.bug-resolved{
+    background-color: rgb(225, 223, 225);
+    padding: 10px;
+
+}
+.text-center-bug{
+
+    padding-top: 50px;
+    margin: auto;
+    padding-bottom: 20px;
+   
+}
+.select{
+    margin: 10px;
+    border:rgb(from color r g b);
+    padding: 2px;
+    
+}
+.container-eachlist{
+    padding: 10px;
+    background-color: azure;
+   
+
+}
+.thumb-img{
+    width: 50px;
+    height: auto; 
+    border-radius: 10px;   
+}
+
+.custom-button{
+   padding-left: 2px;
+    
+}
