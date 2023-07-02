@@ -6,11 +6,14 @@ import store from "../store/store";
 import { bugRESOLVED, bugSORTED } from "../store/actionCreator";
 import EachBugItem from "./EachBugItem";
 import { ListGroup, Badge } from "react-bootstrap";
+import CommentSection from "./CommentSection";
 
 
 const BugList = () => {
     const bugs = useSelector((state) => state);
     const [res, setRes] = useState(true);
+    const [enable , setEnable] = useState(false);
+
 
     const bugResolvedHandle = (id) => {
         store.dispatch(bugRESOLVED(id, res));
@@ -24,6 +27,12 @@ const BugList = () => {
         console.log(store.getState());
 
     }
+    const comEnable=()=>{
+        console.log("Comment button enabled");
+        setEnable(!enable);
+        
+
+    }
 
     const bugsDisplay = bugs.map((bug, index) => (bug.resolved === false &&
         (<React.Fragment >
@@ -31,7 +40,11 @@ const BugList = () => {
             <Badge bg="light" >
                         <button className="btn btn-secondary custom-button" onClick={() => bugResolvedHandle(bug.id)}> In-Progress </button>
                         <button className="btn btn-secondary  custom-button " onClick={() => bugResolvedHandle(bug.id)}> Resolved </button>
+                        <button className="btn btn-secondary  custom-button " 
+                        onClick={() => comEnable()}> Comment </button>
+
             </Badge>
+            { enable && <CommentSection> </CommentSection>}
         </React.Fragment>   
         )));
 
