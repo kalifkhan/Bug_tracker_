@@ -9,7 +9,7 @@ import { bugRESOLVED } from "../store/actionCreator";
 
 const EachBugItem = (props) => {
     
-    return <div>
+    return <div className="Eachitem-container">
         <ListGroup as="ol" >
             <ListGroup.Item
                 as="li"

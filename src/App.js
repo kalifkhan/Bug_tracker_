@@ -17,7 +17,7 @@ function App() {
   return (
     <div className="App">
       <MyRedux flag={flag} onSubmititing={setFlagfalse}> </MyRedux>
-      {flag && <DataAPI> </DataAPI>}
+      {/* {flag && <DataAPI> </DataAPI>} */}
 
 
     </div>

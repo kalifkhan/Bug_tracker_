@@ -7,8 +7,12 @@ const CommentSection=()=>{
     const comRef = useRef();
 
     const subHandle=()=>{
-        const comment = comRef.current.value;
 
+        const comment = comRef.current.value;
+        if(comment.trim() === '')
+        {
+            return;
+        }
         console.log("add comment is clicked");
         setCom( (prevC) => [...prevC ,comment ] )
         comRef.current.value="";

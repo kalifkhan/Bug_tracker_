@@ -37,10 +37,10 @@ const BugList = () => {
     const bugsDisplay = bugs.map((bug, index) => (bug.resolved === false &&
         (<React.Fragment >
             <EachBugItem key={index} bug={bug} > </EachBugItem>
-            <Badge bg="light" >
-                        <button className="btn btn-secondary custom-button" onClick={() => bugResolvedHandle(bug.id)}> In-Progress </button>
-                        <button className="btn btn-secondary  custom-button " onClick={() => bugResolvedHandle(bug.id)}> Resolved </button>
-                        <button className="btn btn-secondary  custom-button " 
+            <Badge bg="light" style={{ width: '100%'}} >
+                        {/* <button  className="btn btn-secondary custom-button" onClick={() => bugResolvedHandle(bug.id)}> In-Progress </button> */}
+                        <button style={{ padding: '5px' , margin: '5px' }}  className="btn btn-secondary  custom-button " onClick={() => bugResolvedHandle(bug.id)}> Resolved </button>
+                        <button style={{ padding: '5px'}}  className="btn btn-secondary  custom-button " 
                         onClick={() => comEnable()}> Comment </button>
 
             </Badge>
@@ -54,19 +54,19 @@ const BugList = () => {
     return <div>
         <Container className="bugs-list-container">
             <Row className="buglist-row">
-                <Col xs={6} md={4} className="bug-add">
+                <Col xs={6} md={6} className="bug-add">
                     Bug Added list
                     {bugsDisplay}
                 </Col>
-                <Col xs={6} md={4} className="bug-inprogress">
+                {/* <Col xs={6} md={4} className="bug-inprogress">
                     In-Progress Bug List
 
                     <ul>
 
                     </ul>
-                </Col>
-                <Col xs={6} md={4} className="bug-resolved">
-                    Resolved
+                </Col> */}
+                <Col xs={6} md={6} className="bug-resolved">
+                    Resolved List
                     {bugsSorted}
                    
                 </Col>

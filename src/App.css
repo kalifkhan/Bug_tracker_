@@ -59,13 +59,17 @@
 
 .custom-button{
    padding-left: 2px;
+   
     
 }
 .container-comment{
     font-family: cursive, sans-serif;
-    background-color: #2ecc71;
+    background-color:rgb(187, 145, 187);
     color: white;
     padding: 10px;
     border-radius: 4px;
-    box-shadow: 2px 2px 20px 23px #7fecad;
+    box-shadow: 2px 2px 20px 23px #bcc4bf;
+}
+.Eachitem-container{
+    padding-top: 10px;
 }
