@@ -1,5 +1,5 @@
 #nav-bar-container{
-    background: #e48787;;
+    background: #ccdc94;;
     height: 90px;
     border: solid;
     border: #e48787 ;
@@ -19,7 +19,7 @@
        
 }
 .bug-add{
-        background-color: rgb(187, 145, 187);
+        background-color: rgb(225, 223, 225);
         padding: 10px;
 }
 .bug-inprogress{
