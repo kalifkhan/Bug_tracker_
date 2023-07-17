@@ -51,10 +51,9 @@ const MyRedux = (props) => {
                         <button onClick={addHandle}> ADD BUG </button>
 
                         <select className="select" ref={inputType}>
-
                             <option> Project Bug </option>
                             <option> System Bug </option>
-                            <option className="btn"> Logic Bug </option>
+                            <option> Logic Bug </option>
                         </select>
 
                     </div>

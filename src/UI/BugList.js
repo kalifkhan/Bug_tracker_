@@ -51,11 +51,13 @@ const BugList = () => {
     const bugsSorted = bugs.map((bug, index) => (bug.resolved === true &&
         <EachBugItem key={index} bug={bug} > </EachBugItem>));
 
-    return <div>
+    return <div className="container_body">
         <Container className="bugs-list-container">
             <Row className="buglist-row">
-                <Col xs={6} md={6} className="bug-add">
-                    Bug Added list
+                <Col xs={6} md={6} className="bug-display">
+                   <div className="title"> 
+                   <h4 > Bug Added list </h4>
+                   </div>
                     {bugsDisplay}
                 </Col>
                 {/* <Col xs={6} md={4} className="bug-inprogress">
@@ -65,8 +67,10 @@ const BugList = () => {
 
                     </ul>
                 </Col> */}
-                <Col xs={6} md={6} className="bug-resolved">
-                    Resolved List
+                <Col xs={6} md={6} className="bug-display">
+                <div className="title"> 
+                   <h4 > Resolved List </h4>
+                   </div>
                     {bugsSorted}
                    
                 </Col>

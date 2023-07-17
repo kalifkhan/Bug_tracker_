@@ -1,27 +1,45 @@
-#nav-bar-container{
-    background: #ccdc94;;
-    height: 90px;
-    border: solid;
-    border: #e48787 ;
-    padding: 10px;
-    
-    width: 1700px;
-    font-family :'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;   
- 
-
-} 
+.container_body{
+    position: relative;
+    background-color: beige;
+    width: 800px;
+    max-width: 800px;
+    top: 0;
+    font-weight: 600;
+    left: 20%;
+    right: 20%;
+    margin-top: 2px;
+}
 .bugs-list-container{
-        height: 300px;
-        margin-top: 10px;
+
+        width: 300px;
+       height: 350px;
+
+        margin-top: 0px;
         overflow: scroll; 
         border: solid rgb(213, 213, 232);
-        
-       
+        background-color: rgb(20, 20, 11);
+     
 }
-.bug-add{
-        background-color: rgb(225, 223, 225);
-        padding: 10px;
+.buglist-row{
+   
 }
+.bug-display {
+    background-color: rgb(10, 8, 10);
+    padding: 10px;
+    overflow: auto; 
+    width: 300px;
+    max-height: 350px; 
+    position: relative; 
+  }
+  
+  .title {
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 0; /* Add 'margin-top: 0;' to remove the default margin */
+    /* Add 'padding-bottom: 10px;' for spacing between title and content */
+    background-color: rgb(242, 224, 224);
+  }
 .bug-inprogress{
     background-color: rgb(209, 186, 209);
         padding: 10px;
@@ -59,9 +77,8 @@
 
 .custom-button{
    padding-left: 2px;
-   
-    
 }
+
 .container-comment{
     font-family: cursive, sans-serif;
     background-color:rgb(187, 145, 187);
