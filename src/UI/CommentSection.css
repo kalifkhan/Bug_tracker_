@@ -1,0 +1,38 @@
+.container-comment {
+  
+    padding: 10px;
+    border: 1px solid #edbfbf;
+    border-radius: 5px;
+    background-color: rgb(212, 123, 15);
+  }
+  
+  .container-comment input[type="text"] {
+    width: 200px;
+    padding: 5px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .container-comment button {
+    padding: 2px 8px;
+    background-color: #d3e4f6;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .container-comment button:hover {
+    background-color: #0056b3;
+  }
+  
+  .container-comment div:nth-child(2) {
+    margin-top: 10px;
+  }
+  
+  .container-comment li {
+    margin-top: 5px;
+    list-style-type: none;
+  }
+  

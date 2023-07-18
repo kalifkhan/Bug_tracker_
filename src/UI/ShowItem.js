@@ -1,18 +1,18 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import {useSelector} from 'react-redux';
+import { useSelector } from 'react-redux';
 
-const ShowItem=()=>{
-    const bugs= useSelector( (state) => state);
+const ShowItem = () => {
+    const bugs = useSelector((state) => state);
 
-   const dis = bugs.map( (bug , index) => (<li key={index}> {bug.id} {bug.description} {bug.inputType} </li>))
+    const dis = bugs.map((bug, index) => (<li key={index}> {bug.id} {bug.description} {bug.inputType} </li>))
 
 
-    return<div>
+    return <div>
         <Container>
-        {dis}
+            {dis}
         </Container>
-        
+
     </div>
 }
 

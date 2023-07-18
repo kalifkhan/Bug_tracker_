@@ -17,8 +17,10 @@ const EachBugItem = (props) => {
             >
                 <div className="ms-2 me-auto">
 
-                    <div className="fw-bold">{props.bug.id.slice(0, 4)}{'- '}{props.bug.description} {'   '}</div>
-                    <div>{props.bug.inputType} </div>
+                    <div className="fw-bold"> 
+                    {props.bug.id.slice(0, 4)}{'- '}{props.bug.description} {'   '}
+                    </div>
+                    <div className="input__type__button">{props.bug.inputType} </div>
                     
                 </div>
             </ListGroup.Item>

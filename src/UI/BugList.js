@@ -13,6 +13,7 @@ const BugList = () => {
     const bugs = useSelector((state) => state);
     const [res, setRes] = useState(true);
     const [enable , setEnable] = useState(false);
+    const [commentId , setComId ] = useState();
 
 
     const bugResolvedHandle = (id) => {
@@ -27,9 +28,10 @@ const BugList = () => {
         console.log(store.getState());
 
     }
-    const comEnable=()=>{
+    const comEnable=( id )=>{
         console.log("Comment button enabled");
         setEnable(!enable);
+        setComId(id);
         
 
     }
@@ -39,12 +41,13 @@ const BugList = () => {
             <EachBugItem key={index} bug={bug} > </EachBugItem>
             <Badge bg="light" style={{ width: '100%'}} >
                         {/* <button  className="btn btn-secondary custom-button" onClick={() => bugResolvedHandle(bug.id)}> In-Progress </button> */}
-                        <button style={{ padding: '5px' , margin: '5px' }}  className="btn btn-secondary  custom-button " onClick={() => bugResolvedHandle(bug.id)}> Resolved </button>
+                        <button style={{ padding: '5px' , margin: '5px' }}  className="btn btn-secondary  custom-button " 
+                        onClick={() => bugResolvedHandle(bug.id)}> Resolved </button>
                         <button style={{ padding: '5px'}}  className="btn btn-secondary  custom-button " 
-                        onClick={() => comEnable()}> Comment </button>
+                        onClick={() => comEnable(bug.id)}> Comment </button>
 
             </Badge>
-            { enable && <CommentSection> </CommentSection>}
+            { enable && commentId === bug.id && <CommentSection> </CommentSection>}
         </React.Fragment>   
         )));
 

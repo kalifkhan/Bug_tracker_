@@ -24,10 +24,12 @@ const MyRedux = (props) => {
     const addHandle = (e) => {
         e.preventDefault();
         const bugInput = inputRef.current.value;
+        const bugType = inputType.current.value;
+
         //console.log(inputRef.current.value)
         //store.dispatch(bugADDED(inputRef.current.value));  
-        if (bugInput.length > 0) {
-            store.dispatch(bugADDED(bugInput, inputType.current.value));
+        if (bugInput.length > 0 && bugType.length > 0) {
+            store.dispatch(bugADDED(bugInput, bugType));
         }
         console.log(store.getState());
         inputType.current.value = '';
@@ -44,9 +46,9 @@ const MyRedux = (props) => {
                 <BugList> </BugList>
             </Provider>
 
-            <Container >
-                <Row className="text-center-bug">
-                    <div className="container">
+            <Container className="text-center-bug">
+                <Row >
+                    <div className="input__container">
                         <label > Enter the Bug <input name="bug" ref={inputRef} /></label>
                         <button onClick={addHandle}> ADD BUG </button>
 
