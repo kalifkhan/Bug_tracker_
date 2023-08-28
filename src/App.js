@@ -6,20 +6,12 @@ import { useState } from 'react';
 
 function App() {
   const [flag, setFlag] = useState(false);
-
-
   const setFlagfalse = () => {
     setFlag(!flag)
-
   }
-
-
   return (
     <div className="App">
       <MyRedux flag={flag} onSubmititing={setFlagfalse}> </MyRedux>
-      {/* {flag && <DataAPI> </DataAPI>} */}
-
-
     </div>
   );
 }

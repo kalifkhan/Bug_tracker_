@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import '../App.css';
+
 import { Container, Col, Row, Button } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import store from "../store/store";
@@ -38,20 +39,25 @@ const BugList = () => {
 
     const bugsDisplay = bugs.map((bug, index) => (bug.resolved === false &&
         (<React.Fragment >
+            <div className="display-flex-bug-button">
+
+           
             <EachBugItem key={index} bug={bug} > </EachBugItem>
-            <Badge bg="light" style={{ width: '100%'}} >
+            <div bg="light" className="buttons-style" >
                         {/* <button  className="btn btn-secondary custom-button" onClick={() => bugResolvedHandle(bug.id)}> In-Progress </button> */}
-                        <button style={{ padding: '5px' , margin: '5px' }}  className="btn btn-secondary  custom-button " 
+                        <button className="button-45" 
                         onClick={() => bugResolvedHandle(bug.id)}> Resolved </button>
-                        <button style={{ padding: '5px'}}  className="btn btn-secondary  custom-button " 
+                        <button className="button-45"
                         onClick={() => comEnable(bug.id)}> Comment </button>
 
-            </Badge>
+            </div>
+           
+            </div>
             { enable && commentId === bug.id && <CommentSection> </CommentSection>}
         </React.Fragment>   
         )));
 
-    const bugsSorted = bugs.map((bug, index) => (bug.resolved === true &&
+    const bugsResolved = bugs.map((bug, index) => (bug.resolved === true &&
         <EachBugItem key={index} bug={bug} > </EachBugItem>));
 
     return <div className="container_body">
@@ -74,7 +80,7 @@ const BugList = () => {
                 <div className="title"> 
                    <h4 > Resolved List </h4>
                    </div>
-                    {bugsSorted}
+                    {bugsResolved}
                    
                 </Col>
             </Row>
